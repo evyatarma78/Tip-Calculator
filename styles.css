@@ -66,23 +66,33 @@ input{
 }
 
 
-h3{
+footer{
 	position: absolute;
-	margin-top: 35%;
+	margin-top: 20%;
 	left: 22%;
 }
 
-a{
-	color:#06283D;
+h3 > a{
+	color: #333333;
 	text-decoration: none;
 	letter-spacing: 1.5px;
 	
 
 }
 
+h4 > a{
+	color: #4a77d4;
+	text-decoration: none;
+}
+
+
 a:hover {
 	
 	color: white;
+}
+
+#copyright{
+	color: #6eb6de;
 }
 
 
