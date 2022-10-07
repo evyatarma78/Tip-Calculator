@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="heb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <title>Tip Calculator</title>
+</head>
+<body>
+    
+
+    <div class="login">
+        <h1>מחשבון טיפים</h1>
+        <form>
+            <label for="">סכום הארוחה</label>
+            <input id="amount" type="text" name="u" placeholder="סכום הארוחה" required="required"/>
+
+            <label for="">בין כמה סועדים לחלק ?</label>
+            <input id="persons" type="text" name="p" placeholder="?כמה אתם" required="required"/>
+
+            <label for="">כמה אחוז טיפ תרצו להשאיר ?</label>
+            <input id="percent" type="text" name="p" placeholder="אחוז הטיפ" required="required"/>
+            <br>
+            
+            <button onclick="history.go(0);" class="btn btn-danger btn-block btn-large">איפוס</button>
+
+        </form>
+        <br> 
+        <button onclick="calc()" class="btn btn-primary btn-block btn-large">חשב </button>
+        <h2 id="tip"></h2>
+        <h2 id="finel"></h2>
+
+        
+        <footer> <h3><a rel="stylesheet" href="https://github.com/evyatarma78" target="_blank">Evyatar Mahatsri © </h3></footer>
+        
+    </div>
+    
+
+    <script src="./source.js"></script>
+
+
+    
+</body>
+</html>
