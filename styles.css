@@ -14,15 +14,16 @@
 html { width: 100%; height:100%; overflow:hidden; }
 
 body { 
-	width: 100%;
-	height:100%;
+	height: 100px;
+	width: 100px;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #A7D2CB;
+	
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
 }
 .login { 
 	position: absolute;
-	top: 25%;
+	top: 16%;
 	left: 50%;
 	margin: -150px 0 0 -150px;
 	width:300px;
@@ -32,7 +33,7 @@ body {
 
 input { 
 	width: 100%; 
-	margin-bottom: 20px; 
+	margin-bottom: 25px; 
 	background: rgba(0,0,0,0.3);
 	border: none;
 	outline: none;
@@ -65,17 +66,34 @@ input{
 	background-color: #f5f5f5;
 }
 
+#hide{
+	display: none;
 
-footer{
-	position: absolute;
-	margin-top: 20%;
-	left: 22%;
 }
+footer {
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	right: 20%;
+	bottom: -10%;
+	text-align: center;
+	
+}
+
+
+ @media (min-width: 300px){
+	footer{
+	position: fixed;
+	right: 5%;
+	bottom: 1%;
+}
+} 
 
 h3 > a{
 	color: #333333;
 	text-decoration: none;
 	letter-spacing: 1.5px;
+	text-align: center;
 	
 
 }
@@ -83,6 +101,7 @@ h3 > a{
 h4 > a{
 	color: #4a77d4;
 	text-decoration: none;
+	text-align: center;
 }
 
 
