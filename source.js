@@ -1,36 +1,49 @@
-const para = document.querySelector("#result > p");
-let txt = "";
-const printToResult = (key)=>{
-    if (txt == 0) {
-        txt = "";
-        txt += key;
-        para.innerHTML = txt;
-    }
+function calc() {
+  var amount = document.getElementById("amount").value;
+  var per = document.getElementById("percent").value;
+  var persons = document.getElementById("persons").value;
+  let tip = ((amount * per) / 100);
 
-    else {
-        txt += key;
-        para.innerHTML = txt;
-    }
+  if (amount == "" ||amount == NaN || amount <=0) {
+    alert("אנא מלא את סכום הארוחה");
+    return;
+  } 
+  else if (persons == "" || persons < 1  || persons % 1 != 0) {
+    alert(" אנא השלם את כמות הסועדים");
+    return;
+
+  } else if (tip == "" ||tip < 1 ) {
+    alert("אנא השלם את אחוז הטיפ");
+    return;
+
+  } 
+
+
+  else if (tip === 0) {
+    alert("תשאיר קצת טיפ יקמצן");
+    return;
+
+} 
+  else {
+   
+    document.getElementById("tip").innerHTML =
+      " סכום הטיפ הינו " + "<br>" + tip + "&nbsp" + " ש״ח";
+
+    let f_bill =((+amount + +tip) / persons);
+
+    tab = (f_bill * persons).toFixed(1);
+
+    document.getElementById("finel").innerHTML =
+      "הסכום לתשלום לכל סועד  הינו" + "&nbsp" + f_bill.toFixed(1) + "&nbsp" + "ש״ח";
+
+      document.getElementById("tab").innerHTML =  'סה"כ לתשלום ' + "&nbsp" + tab + "&nbsp" + "ש״ח";
+
+       document.getElementById("hide").style.display = "inherit"
+
+  }
 
 }
 
-const showResult = () =>{
-    
-    
-    
-    if (typeof eval(txt)) {
-        let final = eval(txt);
-        txt = final;
-        para.innerHTML = final;
-    }
+let d = new Date();
 
-    else {
-        para.innerHTML = "ERROR";
-    }
-
-}
-
-const clearResult = () => {
-    txt = "0";
-    para.innerHTML = txt;
-}
+document.getElementById("para").innerHTML = "Evyatar Mahatsri ©" + d.getFullYear();

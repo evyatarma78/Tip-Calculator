@@ -1,42 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="heb" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+    <title>Tip Calculator</title>
 </head>
 <body>
-    <center>
-    <div id="calculator">
+    
+    <header>
+    <div class="login">
         
-        <div id="result">
-            <p>0</p>
-        </div>
+        <h1>מחשבון טיפים</h1>
+        <form>
+            <label for="">מהו סכום הארוחה?</label>
+            <input id="amount" type="number" name="u" placeholder=" סכום הארוחה?" required="required"/>
 
-        <div id="buttons">
-            <input type="button" value="7" onclick="printToResult(this.value)">
-            <input type="button" value="8" onclick="printToResult(this.value)">
-            <input type="button" value="9" onclick="printToResult(this.value)">
-            <input type="button" value="*" onclick="printToResult(this.value)">
-            <input type="button" value="4" onclick="printToResult(this.value)">
-            <input type="button" value="5" onclick="printToResult(this.value)">
-            <input type="button" value="6" onclick="printToResult(this.value)">
-            <input type="button" value="-" onclick="printToResult(this.value)">
-            <input type="button" value="1" onclick="printToResult(this.value)">
-            <input type="button" value="2" onclick="printToResult(this.value)">
-            <input type="button" value="3" onclick="printToResult(this.value)">
-            <input type="button" value="+" onclick="printToResult(this.value)">
-            <input type="button" value="C" onclick="clearResult()">
-            <input type="button" value="0" onclick="printToResult(this.value)">
-            <input type="button" value="=" onclick="showResult()">
-            <input type="button" value="/" onclick="printToResult(this.value)">
-        </div>
+            <label for="">בין כמה סועדים לחלק ?</label>
+            <input id="persons" type="number" name="p" placeholder=" כמה אתם? " required="required"/>
 
-    </center>
-    </div>
+            <label for="">כמה אחוז טיפ תרצו להשאיר ?</label>
+            <input id="percent" type="number" name="p" placeholder="אחוז הטיפ" required="required"/>
+            <br>
+            
+            <button onclick="history.go(0);" class="btn btn-light btn-block btn-large">איפוס</button>
 
-    <script src="source.js"></script>
+        </form>
+        <br> 
+        <button onclick="calc()" class="btn btn-primary btn-block btn-large">חשב </button>
+        <h2 id="tip"></h2>
+        <h2 id="finel"></h2>
+        <h2 id ="tab"></h2>
+        
+             
+     </div>
+     
+    </header>
+    
+    
+
+    
+     <footer>
+       <h3 id="hide"><a href= "mailto: evyatarma78@gmail.com">?Ran into a bug  email me <i class="fa-sharp fa-solid fa-envelope"></i></a></h3>
+       
+        
+
+        <h4 id="copyright"><a rel="stylesheet" href="https://github.com/evyatarma78" target="_blank"> <p id="para"> </h4> 
+        
+    </footer>
+    
+    
+
+    <script src="./source.js"></script>
+
+
+    
 </body>
 </html>
